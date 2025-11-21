@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ru-mobile-outage-correlator"
+version = "0.1.0"
+description = "Correlate internal incidents with Russian mobile/internet operator outages"
+authors = [{name = "Ranas Mukminov"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.6",
+    "typer>=0.12",
+    "pyyaml>=6.0",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+ru-mobile-outage-correlator = "ru_mobile_outage_correlator.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I", "B", "UP", "ANN"]
+ignore = ["ANN101", "ANN102"]
+
+[tool.coverage.run]
+source = ["ru_mobile_outage_correlator"]

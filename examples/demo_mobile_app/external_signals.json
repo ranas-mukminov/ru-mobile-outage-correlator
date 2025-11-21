@@ -1,0 +1,20 @@
+[
+  {
+    "source_type": "news",
+    "operator": "MTS",
+    "regions": ["Москва", "Тверская область"],
+    "severity": "critical",
+    "start_at": "2024-04-12T11:00:00",
+    "end_at": "2024-04-12T12:00:00",
+    "confidence": 0.9
+  },
+  {
+    "source_type": "news",
+    "operator": "Tele2",
+    "regions": ["Москва"],
+    "severity": "major",
+    "start_at": "2024-04-12T11:10:00",
+    "end_at": "2024-04-12T11:45:00",
+    "confidence": 0.7
+  }
+]

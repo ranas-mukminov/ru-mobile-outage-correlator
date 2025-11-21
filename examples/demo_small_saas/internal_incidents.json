@@ -1,0 +1,12 @@
+[
+  {
+    "service_name": "payments",
+    "endpoint_pattern": "/api/pay",
+    "error_type": "5xx",
+    "regions": ["Самарская область"],
+    "operator_hint": "MegaFon",
+    "metrics": {"error_rate": 0.35, "latency_p95": 2.1, "rps_change": -0.1},
+    "start_at": "2024-03-01T09:34:00",
+    "end_at": "2024-03-01T10:05:00"
+  }
+]
