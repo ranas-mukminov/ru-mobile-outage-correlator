@@ -18,7 +18,7 @@ class TemplateSummaryGenerator:
         operator = result.incident.operator_hint or "несколько операторов"
         return (
             f"{result.incident.start_at:%H:%M}–{result.incident.end_at or '...'} — "
-            f"классфикация: {result.classification}, оператор: {operator}, регионы: {regions}, "
+            f"классификация: {result.classification}, оператор: {operator}, регионы: {regions}, "
             f"ошибки: {result.incident.metrics.get('error_rate', 'нет данных')}"
         )
 

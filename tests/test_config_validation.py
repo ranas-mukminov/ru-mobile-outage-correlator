@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 
 import pytest
 
@@ -12,7 +12,7 @@ def test_external_requires_region():
             operator="MTS",
             regions=[],
             severity=Severity.MAJOR,
-            start_at=datetime.utcnow(),
+            start_at=datetime.now(timezone.utc),
             end_at=None,
             confidence=0.5,
         )
@@ -26,7 +26,7 @@ def test_internal_requires_region():
             error_type="5xx",
             regions=[],
             metrics={},
-            start_at=datetime.utcnow(),
+            start_at=datetime.now(timezone.utc),
             end_at=None,
         )
 
