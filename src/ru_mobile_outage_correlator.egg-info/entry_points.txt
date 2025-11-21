@@ -1,0 +1,2 @@
+[console_scripts]
+ru-mobile-outage-correlator = ru_mobile_outage_correlator.cli:app
