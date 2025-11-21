@@ -1,0 +1,22 @@
+[
+  {
+    "service_name": "mobile-api",
+    "endpoint_pattern": "/v1/feed",
+    "error_type": "timeout",
+    "regions": ["Москва", "Тверская область"],
+    "operator_hint": "MTS",
+    "metrics": {"error_rate": 0.25, "latency_p95": 3.4, "rps_change": -0.2},
+    "start_at": "2024-04-12T11:05:00",
+    "end_at": "2024-04-12T11:50:00"
+  },
+  {
+    "service_name": "mobile-api",
+    "endpoint_pattern": "/v1/transfer",
+    "error_type": "connect_error",
+    "regions": ["Москва"],
+    "operator_hint": null,
+    "metrics": {"error_rate": 0.08, "latency_p95": 1.2, "rps_change": -0.05},
+    "start_at": "2024-04-12T11:20:00",
+    "end_at": "2024-04-12T11:40:00"
+  }
+]
